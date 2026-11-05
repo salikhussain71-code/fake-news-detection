@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fake-news-detection"
+version = "1.0.0"
+description = "Binary fake-vs-real news classification (Kaggle Fake and Real News dataset): TF-IDF + Logistic Regression / Linear SVM / Naive Bayes, with leakage-aware preprocessing and explainable predictions."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = [
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "scikit-learn>=1.3",
+    "nltk>=3.8",
+    "matplotlib>=3.7",
+    "wordcloud>=1.9",
+    "joblib>=1.3",
+]
+
+[project.scripts]
+fakenews-train = "fake_news_detection.train:main"
+fakenews-predict = "fake_news_detection.predict:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 110
+target-version = "py39"
+extend-exclude = ["notebooks"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "B"]
+
+[tool.ruff.lint.per-file-ignores]
+"scripts/build_notebook.py" = ["E501"]
