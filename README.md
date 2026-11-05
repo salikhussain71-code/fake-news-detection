@@ -1,6 +1,6 @@
 # Fake News Detection
 
-[![CI](https://github.com/YOUR-USERNAME/fake-news-detection/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR-USERNAME/fake-news-detection/actions)
+[![CI](https://github.com/salikhussain71-code/fake-news-detection/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR-USERNAME/fake-news-detection/actions)
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-1.3%2B-orange)
 ![NLTK](https://img.shields.io/badge/NLTK-3.8%2B-green)
@@ -111,7 +111,7 @@ fake-news-detection/
 
 ```bash
 # 1. Clone
-git clone https://github.com/YOUR-USERNAME/fake-news-detection.git
+git clone https://github.com/salikhussain71-code/fake-news-detection.git
 cd fake-news-detection
 
 # 2. Create a virtual environment
